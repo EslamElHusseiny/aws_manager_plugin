@@ -1,196 +1,196 @@
 #compdef aws_manager
 
 __capture-stack-outputs() {
-    _arguments \
-        '--stack-name[The name or unique ID of the stack]' \
-        '--yaml-file-path[The fully qualified path to the existing YAML file. If file not found, this is not going to create it.]' \
-				'--items-to-extract[White-space separated array of items keys to be extracted from the outputs hash.]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
+  _arguments \
+    '--stack-name[The name or unique ID of the stack]' \
+    '--yaml-file-path[The fully qualified path to the existing YAML file. If file not found, this is not going to create it.]' \
+    '--items-to-extract[White-space separated array of items keys to be extracted from the outputs hash.]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
 }
 
 __cf-create-stack() {
-    _arguments \
-        '--cfn-template[JSON file containing the CloudFormation template]' \
-        '--yaml-inventory[Inventory YAML file containing the parameters values]' \
-				'--check-status[Check status flag. Default false. When set true, query stack status.]' \
-				'--no-check-status[Check status flag. Default false. When set true, query stack status.]' \
-				'--delay[How often to retry checking the status. Default: 5]' \
-				'--max-attempts[The number of max_attempts when expecting a status. Default: 60]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
+  _arguments \
+    '--cfn-template[JSON file containing the CloudFormation template]' \
+    '--yaml-inventory[Inventory YAML file containing the parameters values]' \
+    '--check-status[Check status flag. Default false. When set true, query stack status.]' \
+    '--no-check-status[Check status flag. Default false. When set true, query stack status.]' \
+    '--delay[How often to retry checking the status. Default: 5]' \
+    '--max-attempts[The number of max_attempts when expecting a status. Default: 60]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
 }
 
 __cf-delete-stack() {
-    _arguments \
-        '--cfn-template[JSON file containing the CloudFormation template]' \
-        '--yaml-inventory[Inventory YAML file containing the parameters values]' \
-				'--check-status[Check status flag. Default false. When set true, query stack status.]' \
-				'--no-check-status[Check status flag. Default false. When set true, query stack status.]' \
-				'--delay[How often to retry checking the status. Default: 5]' \
-				'--max-attempts[The number of max_attempts when expecting a status. Default: 60]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
+  _arguments \
+    '--cfn-template[JSON file containing the CloudFormation template]' \
+    '--yaml-inventory[Inventory YAML file containing the parameters values]' \
+    '--check-status[Check status flag. Default false. When set true, query stack status.]' \
+    '--no-check-status[Check status flag. Default false. When set true, query stack status.]' \
+    '--delay[How often to retry checking the status. Default: 5]' \
+    '--max-attempts[The number of max_attempts when expecting a status. Default: 60]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
 }
 
 __cf-list-stacks() {
-    _arguments \
-        '--stack-status-codes[The status codes to filter stacks on. Default: \["CREATE_COMPLETE"\] ]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
+  _arguments \
+    '--stack-status-codes[The status codes to filter stacks on. Default: \["CREATE_COMPLETE"\] ]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
 }
 
 __cf-update-stack() {
-    _arguments \
-				'--stack-name[The name of the stack to be updated]' \
-        '--cfn-template[JSON file containing the CloudFormation template]' \
-        '--yaml-inventory[Inventory YAML file containing the parameters values]' \
-        '--force-update[Force update regardless of diffs]' \
-        '--no-force-update[Force update regardless of diffs]' \
-        '--ignore-params[List of parameters to ignore on diffs]' \
-        '--check-status[Check status flag. Default false. When set true, query stack status.]' \
-        '--no-check-status[Check status flag. Default false. When set true, query stack status.]' \
-        '--delay[How often to retry checking the status. Default: 5]' \
-        '--max-attempts[The number of max_attempts when expecting a status. Default: 60]' \
-        '--aws-access-key[Access key of the AWS account]' \
-        '--aws-secret-key[Secret key of the AWS account]' \
-        '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
+  _arguments \
+    '--stack-name[The name of the stack to be updated]' \
+    '--cfn-template[JSON file containing the CloudFormation template]' \
+    '--yaml-inventory[Inventory YAML file containing the parameters values]' \
+    '--force-update[Force update regardless of diffs]' \
+    '--no-force-update[Force update regardless of diffs]' \
+    '--ignore-params[List of parameters to ignore on diffs]' \
+    '--check-status[Check status flag. Default false. When set true, query stack status.]' \
+    '--no-check-status[Check status flag. Default false. When set true, query stack status.]' \
+    '--delay[How often to retry checking the status. Default: 5]' \
+    '--max-attempts[The number of max_attempts when expecting a status. Default: 60]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
 }
 
 __describe-stack-outputs() {
-    _arguments \
-        '--stack-name[The name or unique ID of the stack]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
+  _arguments \
+    '--stack-name[The name or unique ID of the stack]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
 }
 
 __cf-validate-stack() {
-    _arguments \
-        '--cfn-template[JSON file containing the CloudFormation template]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
+  _arguments \
+    '--cfn-template[JSON file containing the CloudFormation template]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]'
 }
 
 __ec2-attach-volume() {
-		_arguments \
-				'--volume-id[The volume to attach. It must be on the same Availability Zone (AZ) as the EC2 instance.]' \
-				'--instance-id[The instance where the volume needs to be attached.]' \
-				'--device[The device mount point. It should be of the form '/dev/sdh/' or 'xvdh'.]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
+  _arguments \
+    '--volume-id[The volume to attach. It must be on the same Availability Zone (AZ) as the EC2 instance.]' \
+    '--instance-id[The instance where the volume needs to be attached.]' \
+    '--device[The device mount point. It should be of the form '/dev/sdh/' or 'xvdh'.]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
 }
 
 __ec2-backup-amis() {
-		_arguments \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
+  _arguments \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
 }
 
 __ec2-delete-amis() {
-		_arguments \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
+  _arguments \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
 }
 
 __ec2-backup-amis() {
-		_arguments \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
+  _arguments \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
 }
 
 __retrieve-stack-status() {
-		_arguments \
-				'--stack-name[The name or unique ID of the stack]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
+  _arguments \
+    '--stack-name[The name or unique ID of the stack]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
 }
 
 __route53-create-record() {
-		_arguments \
-				'--hosted-zone-id[he existing hosted zone id to be used for creating the record set]' \
-				'--domain-name[The existing domain name to be used for creating the record set]' \
-				'--record-name[The name of the record set to create or modify]' \
-				'--interface[The type of network interface to be used for creating the record set]' \
-				'--ttl[the TTL to use for the record. Default: 300]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
+  _arguments \
+    '--hosted-zone-id[he existing hosted zone id to be used for creating the record set]' \
+    '--domain-name[The existing domain name to be used for creating the record set]' \
+    '--record-name[The name of the record set to create or modify]' \
+    '--interface[The type of network interface to be used for creating the record set]' \
+    '--ttl[the TTL to use for the record. Default: 300]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '--aws-region[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
 }
 
 __s3-upload() {
-		_arguments \
-				'(-f,--file)'{-f,--file}'[File you want to upload.]' \
-				'(-b,--bucket)'{-b,--bucket}'[Name of the bucket you want to upload to.]' \
-				'(-p,--bucket-path)'{-p,--bucket-path}'[Path or Key to upload to. HINT: start with the folder and end with a `/` e.g. `my/folder/`]' \
-				'--aws-access-key[Access key of the AWS account]' \
-				'--aws-secret-key[Secret key of the AWS account]' \
-				'(-r,--aws-region)'{-r,--aws-region}'[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
+  _arguments \
+    '(-f,--file)'{-f,--file}'[File you want to upload.]' \
+    '(-b,--bucket)'{-b,--bucket}'[Name of the bucket you want to upload to.]' \
+    '(-p,--bucket-path)'{-p,--bucket-path}'[Path or Key to upload to. HINT: start with the folder and end with a `/` e.g. `my/folder/`]' \
+    '--aws-access-key[Access key of the AWS account]' \
+    '--aws-secret-key[Secret key of the AWS account]' \
+    '(-r,--aws-region)'{-r,--aws-region}'[AWS region to use while connecting to CloudFormation. Default: eu-west-1]' \
 }
 
 local -a _1st_arguments
 _1st_arguments=(
-	"capture-stack-outputs":"Captures all or specific items from the outputs hash of a CloudFormation stack in the given YAML file."
-	"cf-create-stack":"Manages CloudFormation stack creation"
-	"cf-delete-stack":"Deletes CloudFormation stack"
-	"cf-list-stacks":"Lists CloudFormation stacks"
-	"cf-update-stack":"Updates the supplied stack with the new CloudFormation template and the parameters values provided"
-	"cf-validate-stack":"Validates the supplied template file with Cloud Formation"
-	"describe-stack-outputs":"Extracts the outputs hash of a stack based on the name or ID."
-	"ec2-attach-volume":"Attaches an EBS volume to an EC2 instance."
-	"ec2-backup-amis":"Gets a list of all instances with 'Backup=true' and backs them up"
-	"ec2-delete-amis":"Deletes all backup AMIs"
-	"help":"Describe available commands or one specific command"
-	"retrieve-stack-status":"Show the current status of the stack based on stack name"
-	"route53-create-record":"Create a Route53 record set using the parameters provided. If the record already exists then modify it."
-	"s3-upload":"Upload files to an S3 bucket."
+  "capture-stack-outputs":"Captures all or specific items from the outputs hash of a CloudFormation stack in the given YAML file."
+  "cf-create-stack":"Manages CloudFormation stack creation"
+  "cf-delete-stack":"Deletes CloudFormation stack"
+  "cf-list-stacks":"Lists CloudFormation stacks"
+  "cf-update-stack":"Updates the supplied stack with the new CloudFormation template and the parameters values provided"
+  "cf-validate-stack":"Validates the supplied template file with Cloud Formation"
+  "describe-stack-outputs":"Extracts the outputs hash of a stack based on the name or ID."
+  "ec2-attach-volume":"Attaches an EBS volume to an EC2 instance."
+  "ec2-backup-amis":"Gets a list of all instances with 'Backup=true' and backs them up"
+  "ec2-delete-amis":"Deletes all backup AMIs"
+  "help":"Describe available commands or one specific command"
+  "retrieve-stack-status":"Show the current status of the stack based on stack name"
+  "route53-create-record":"Create a Route53 record set using the parameters provided. If the record already exists then modify it."
+  "s3-upload":"Upload files to an S3 bucket."
 )
 
 _arguments '*:: :->command'
 
 if (( CURRENT == 1 )); then
-    _describe -t commands "aws_manager command" _1st_arguments
-    return
+  _describe -t commands "aws_manager command" _1st_arguments
+  return
 fi
 
 local -a _command_args
 case "$words[1]" in
-	capture-stack-outputs)
-  	__capture-stack-outputs ;;
-	cf-create-stack)
-		__cf-create-stack ;;
- 	cf-delete-stack)
-		__cf-delete-stack ;;
- 	cf-list-stacks)
-		__cf-list-stacks ;;
- 	cf-update-stack)
-		__cf-update-stack ;;
- 	cf-validate-stack)
-		__cf-validate-stack ;;
- 	describe-stack-outputs)
-		__describe-stack-outputs ;;
- 	ec2-attach-volume)
-		__ec2-attach-volume ;;
- 	ec2-backup-amis)
-		__ec2-backup-amis ;;
- 	ec2-delete-amis)
-		__ec2-delete-amis ;;
- 	help)
-		__help ;;
- 	retrieve-stack-status)
-		__retrieve-stack-status ;;
- 	route53-create-record)
-		__route53-create-record ;;
- 	s3-upload)
-		__s3-upload ;;
+  capture-stack-outputs)
+    __capture-stack-outputs ;;
+  cf-create-stack)
+    __cf-create-stack ;;
+  cf-delete-stack)
+    __cf-delete-stack ;;
+  cf-list-stacks)
+    __cf-list-stacks ;;
+  cf-update-stack)
+    __cf-update-stack ;;
+  cf-validate-stack)
+    __cf-validate-stack ;;
+  describe-stack-outputs)
+    __describe-stack-outputs ;;
+  ec2-attach-volume)
+    __ec2-attach-volume ;;
+  ec2-backup-amis)
+    __ec2-backup-amis ;;
+  ec2-delete-amis)
+    __ec2-delete-amis ;;
+  help)
+    __help ;;
+  retrieve-stack-status)
+    __retrieve-stack-status ;;
+  route53-create-record)
+    __route53-create-record ;;
+  s3-upload)
+    __s3-upload ;;
 esac
